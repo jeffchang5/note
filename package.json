@@ -1,0 +1,20 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "jekyll build --destination public && now --prod",
+    "build": "echo ''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffchang5/notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffchang5/notes/issues"
+  },
+  "homepage": "https://github.com/jeffchang5/notes#readme"
+}
