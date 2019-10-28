@@ -58,8 +58,8 @@ So Simple is a simple [Jekyll theme](https://jekyllrb.com/docs/themes/) for your
 [posts-tag-source]: docs/tags.md
 [category-page-preview]: https://mmistakes.github.io/so-simple-theme/categories/edge-case/
 [category-page-source]: docs/edge-case.md
-[grid-view-preview]: https://mmistakes.github.io/so-simple-theme/recipes/
-[grid-view-source]: docs/recipes.md
+<!-- [grid-view-preview]: https://mmistakes.github.io/so-simple-theme/recipes/ -->
+<!-- [grid-view-source]: docs/recipes.md -->
 
 Additional [sample posts](https://mmistakes.github.io/so-simple-theme/posts/) can be view on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs) folder.
 
