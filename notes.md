@@ -1,7 +1,7 @@
 ---
-title: Post Archive
+title: Notes
 layout: posts
-permalink: /posts/
+permalink: /notes/
 show_excerpts: true
 entries_layout: list
 ---

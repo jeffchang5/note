@@ -16,11 +16,11 @@
 theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 locale: en-US
-title: "So Simple Development Site"
-description: "A simple Jekyll theme for words and pictures."
+title: "Notes"
+description: "A collection of my personal notes"
 baseurl: # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: "/images/so-simple-site-logo.png" # path of site logo, e.g. "/assets/images/logo.png"
+logo: "/images/portfolio.png" # path of site logo, e.g. "/assets/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 200
@@ -84,20 +84,13 @@ collections:
 defaults:
   # Post defaults
   - scope:
-      path: "_posts"
+      path: "_notes"
       type: posts
     values:
       layout: post
       comments: true
       share: true
-  # Recipe defaults
-  - scope:
-      path: "_recipes"
-      type: recipes
-    values:
-      layout: post
-      comments: true
-      share: true
+
 
 # Site Author
 author:
@@ -106,26 +99,14 @@ author:
   email:
   twitter: mmistakes
   links:
-    - title: Twitter
-      url: https://twitter.com/mmistakes
-      icon: fab fa-twitter-square
-    - title: Instagram
-      url: https://instagram.com/mmistakes
-      icon: fab fa-instagram
     - title: GitHub
-      url: https://github.com/mmistakes
+      url: https://github.com/jeffchang5
       icon: fab fa-github-square
 
 # Footer Links
 footer_links:
-  - title: Twitter
-    url: https://twitter.com/mmistakes
-    icon: fab fa-twitter-square
-  - title: Instagram
-    url: https://instagram.com/mmistakes
-    icon: fab fa-instagram
   - title: GitHub
-    url: https://github.com/mmistakes
+    url: https://github.com/jeffchang5
     icon: fab fa-github-square
   - title: Feed
     url: atom.xml
