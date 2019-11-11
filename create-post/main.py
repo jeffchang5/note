@@ -6,7 +6,7 @@ from utils.userinputmanager import UserInputManager
 
 import os
 
-plistFilePath = "./markup-generator.plist"
+plist_file_path = "./markup-generator.plist"
 markdown_dir = "/Users/jeffreychang/Documents/notes/_posts/"
 
 
@@ -25,6 +25,8 @@ class MarkDownGenerator:
         path = file_manager.write(data)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
+
+        # AppleScript to open in IA Writer
         os.system(f'osascript {dir_path}/open-in-iawriter.scpt {path}')
 
 
