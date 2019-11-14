@@ -2,6 +2,11 @@ from datetime import datetime
 
 from models.yaml import YAML
 from utils.datemanager import get_current_date
+from typing import Optional
+
+
+def escapeInput(text: str):
+    return text == "!n" or text == ":n"
 
 
 class UserInputManager:
@@ -11,12 +16,14 @@ class UserInputManager:
         categories = self.__promptCategories()
         tags = self.__promptTags()
         last_modified_date = self.__getLastModifiedDate()
+        excerpt = self.__promptExcerpt()
 
         return YAML(
             title,
             categories,
             tags,
-            last_modified_date
+            last_modified_date,
+            excerpt
         )
 
     @staticmethod
@@ -36,13 +43,20 @@ class UserInputManager:
         return self.__getManyInputs("category")
 
     @staticmethod
+    def __promptExcerpt() -> Optional[str]:
+        text = input("Is there a byline you want to leave?  Enter !n or :n to leave.\n")
+        if escapeInput(text) or len(text) == 0:
+            return None
+        return text
+
+    @staticmethod
     def __getManyInputs(readable_data_name: str):
         replies = []
         while True:
             reply = input(f'Enter a {readable_data_name}.\n')
             if len(reply) > 0:
                 stripped = reply.strip().lower()
-                if stripped == "!n" or stripped == ":n":
+                if escapeInput(stripped):
                     break
-                replies += reply
+                replies.append(reply)
         return replies

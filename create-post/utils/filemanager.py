@@ -11,7 +11,7 @@ class FileManager:
 
     def __generateFileName(self, data: YAML):
         date = get_date_from_string(data.lastModifiedDate)
-        hyphen_format_title = self.__generate_hyphen_format(data.title)
+        hyphen_format_title = self.__generate_hyphen_format(data.title).lower()
 
         return f"{date.year}-{date.month}-{date.day}-{hyphen_format_title}.md"
 

@@ -3,11 +3,9 @@
 # heapq
 from utils.filemanager import FileManager
 from utils.userinputmanager import UserInputManager
+from config import plist_file_path, markdown_dir
 
 import os
-
-plist_file_path = "./markup-generator.plist"
-markdown_dir = "/Users/jeffreychang/Documents/notes/_posts/"
 
 
 class MarkDownGenerator:

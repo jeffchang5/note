@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Optional
 
 
 @dataclass
@@ -7,6 +8,7 @@ class YAML:
     categories: list
     tags: list
     lastModifiedDate: str
+    excerpt: Optional[str]
 
     @staticmethod
     def __getYMLFormatting():
@@ -16,12 +18,17 @@ class YAML:
         title = f'title: "{self.title}"\n'
         categories = ["categories:\n"] + ["  - " + i + "\n" for i in self.categories]
         tags = ["tags:\n"] + ["  - " + i + "\n" for i in self.tags]
+        if self.excerpt:
+            excerpt = f'excerpt: "{self.excerpt}"\n'
+        else:
+            excerpt = None
         date = f"last_modified_at: {self.lastModifiedDate}\n"
-
-        return \
+        builder = \
             self.__getYMLFormatting() + \
             [title] + \
             tags + \
-            categories + \
-            [date] + \
-            self.__getYMLFormatting()
+            categories
+        if self.excerpt:
+            builder += excerpt
+        builder += [date] + self.__getYMLFormatting()
+        return builder
