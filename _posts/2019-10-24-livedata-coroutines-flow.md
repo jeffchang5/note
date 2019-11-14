@@ -1,10 +1,11 @@
 ---
 title: "LiveData with Coroutines and Flow"
 categories:
-  - Android
+  - android
 tags:
   - architecture
   - android
+excerpt: "Practice of introducing reactive structures into Kotlin co-routines"
 last_modified_at: 2019-10-24T18:07:22+0000
 ---
 
