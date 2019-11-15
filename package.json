@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "jekyll build --destination public && now --prod",
-    "build": "echo ''"
+    "build": "jekyll build --destination public"
   },
   "repository": {
     "type": "git",
