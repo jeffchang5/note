@@ -58,5 +58,5 @@ class UserInputManager:
                 stripped = reply.strip().lower()
                 if escapeInput(stripped):
                     break
-                replies.append(reply)
+                replies.append(stripped)
         return replies
