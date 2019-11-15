@@ -1,0 +1,24 @@
+
+name: Ruby
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1.1.0
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Build and test with Rake
+      run: |
+        git submodule update --recursive --remote
+        gem install bundler jekyll
+        bundle install --jobs 4 --retry 3
+        bundle exec jekyll build
+        npm install -g now
