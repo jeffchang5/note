@@ -15,3 +15,4 @@ npm-debug.log*
 public/
 create-post/config.py
 .idea/
+.vscode/
