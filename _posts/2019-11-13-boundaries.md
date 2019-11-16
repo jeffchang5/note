@@ -3,7 +3,7 @@ title: "Boundaries"
 tags:
   - software
 categories:
-  - Clean Code
+  - clean code
 excerpt: "Where to separate your code and different unknowns."
 last_modified_at: 2019-11-13T10:44:03.734146
 ---

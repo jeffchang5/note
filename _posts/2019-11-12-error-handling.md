@@ -3,7 +3,7 @@ title: "Error Handling"
 tags:
   - errors
 categories:
-  - Clean Code
+  - clean code
 excerpt: "Best practices of where and how to handle errors."
 last_modified_at: 2019-11-12T10:27:12.377727
 ---
